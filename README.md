@@ -77,3 +77,40 @@ Find the live site [here]
 - I want to have a new experience by making different choices.
 
 ---
+
+## Design
+
+The website uses many typical "cyberpunk" design choices - The background images contrast a grungy, dirty cityscape with bright neon pink and blue hues while the main game area is made to look like an old-school computer terminal with a dot matrix font and typing animations.
+
+### Typography
+
+Google Fonts was used for the following fonts:
+
+  - Dot-gothic is used for most text on the site. It is a sans-serif font.
+  - Tektur is used for the choice button text. It is a sans-serif font.
+  - Rubik Glitch is used for certain interactions. It is a sans-serif font.
+
+### Imagery
+
+Imagery will be AI generated using fooocus and will reflect the gritty, near-future world that the player finds themself in.
+
+### Wireframes
+
+Wireframes were created for mobile and desktop.
+
+[Mobile]
+
+[Desktop]
+
+[Mobile]: docs/wireframes/mm-wireframe-1.png
+[Desktop]: docs/wireframes/mm-wireframe-2.png
+
+## Features
+
+The website will be a single page and all navigation will be done through 2-4 "choice" buttons presented to the player. Once a choice is made (button clicked), the scene will change, including the background image, text box and choice buttons.
+
+The player will be able to make choices early on that will affect what other choices will be available to them later on. For example, they can choose to take or leave an item in scene 2 which will determine whether or not they will have another choice to make later on.
+
+Once players reach the end by either completing the story or reaching a GAME OVER screen, they will be presented with a button to restart from the beginning.
+
+Choices can be made either by clicking the buttons or using number keys 1-4.
