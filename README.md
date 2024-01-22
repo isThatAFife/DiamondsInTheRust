@@ -114,3 +114,17 @@ The player will be able to make choices early on that will affect what other cho
 Once players reach the end by either completing the story or reaching a GAME OVER screen, they will be presented with a button to restart from the beginning.
 
 Choices can be made either by clicking the buttons or using number keys 1-4.
+
+### Future Implementations
+
+  - Add a soundtrack and sound effects to further immerse the player.
+
+## Accessibility
+
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
+
+  - Using semantic HTML.
+  - Using descriptive alt attributes on images on the site.
+  - Ensuring that there is a sufficient colour contrast throughout the site.
+
+  ---
