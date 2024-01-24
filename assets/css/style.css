@@ -76,23 +76,3 @@ body {
     border-color: white;
 }
 
-.text {
-    width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: wrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-size: 2em;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
