@@ -57,6 +57,11 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
+/* Change background */
+function changeBackground(imageUrl) {
+    document.body.style.backgroundImage = "url('" + imageUrl + "')";
+  }
+
 /**
  * Array of objects for the story/choices
  */
@@ -65,6 +70,7 @@ const textNodes = [
     {
         id: 1,
         text: 'You wake up in an alley with no memories. On one side a man is telling you to follow him. [[follow]] The other direction leads to a busy road. [[other way]]',
+        imageUrl: '../images/alley.png',
         options: [
             {
                 text: 'follow',
@@ -79,6 +85,7 @@ const textNodes = [
     {
         id: 2,
         text: 'He ushers you into a dingy bar populated by scum & villainy. Tells you to wait at the bar for a minute. While waiting, the bartender asks if you want a [[drink]]. If you say [[no]], he leaves you alone and you notice a card in front of you behind the bar. You can also run the [[other way]] ',
+        imageUrl: '../images/bar.png',
         options: [
             {
                 text: 'drink',
