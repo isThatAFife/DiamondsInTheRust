@@ -39,7 +39,7 @@ function showTextNode (textNodeIndex) {
 }
 
 function showOption(option) {
-    return true
+    return option.requiredState == null || option.requiredState(state)
 }
 
 /**
@@ -47,7 +47,14 @@ function showOption(option) {
  */
 
 function selectOption(option) {
-
+    const nextTextNodeId = option.nextText
+    /* Check for game over state */
+    if (nextTextNodeId <= 0) {
+        return startGame()
+    }
+    /* take our state, add option.state and override anything there */
+    state = Object.assign(state, option.setState)
+    showTextNode(nextTextNodeId)
 }
 
 /**
@@ -61,12 +68,10 @@ const textNodes = [
         options: [
             {
                 text: 'follow',
-                setState: {},
                 nextText: 2
             },
             {
                 text: 'other way',
-                setState: {},
                 nextText: -1
             }
         ]
@@ -77,19 +82,40 @@ const textNodes = [
         options: [
             {
                 text: 'drink',
-                setState: {},
                 nextText: 3
             },
             {
                 text: 'no',
-                setState: {},
-                nextText: 4
+                nextText: 3
             },
             {
                 text: 'other way',
-                setState: {},
-                nextText: -1
+                nextText: 4
             },
+        ]
+    },
+    {
+        id: 3,
+        text: 'He leads you into a back room filled with scattered prosthetic limbs and tells you to [[get in the blood-stained seat]]. Alternatively you can [[fight him and start running]]',
+        options: [
+            {
+                text: 'get in',
+                nextText: 2
+            },
+            {
+                text: 'other way',
+                nextText: 4
+            }
+        ]
+    },
+    {
+        id: 4,
+        text: 'Game over',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
         ]
     }
 ]
