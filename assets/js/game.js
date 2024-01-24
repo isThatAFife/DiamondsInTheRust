@@ -21,7 +21,25 @@ function startGame() {
  */
 
 function showTextNode (textNodeIndex) {
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    textElement.innerText = textNode.text
+    while (choicesElement.firstChild) {
+        choicesElement.removeChild(choicesElement.firstChild)
+    }
 
+    textNode.options.forEach(option => {
+        if (showOption(option)) {
+            const button = document.createElement('button')
+            button.innerText = option.text
+            button.classList.add('btn')
+            button.addEventListener('click', () => selectOption(option))
+            choicesElement.appendChild(button)
+        }
+    })
+}
+
+function showOption(option) {
+    return true
 }
 
 /**
