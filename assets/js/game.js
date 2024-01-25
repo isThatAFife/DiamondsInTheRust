@@ -1,3 +1,12 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//    var startButton = document.querySelector('#start-button')
+//    var input = document.querySelector('#name-input')
+//    var container = document.querySelector('#container')
+//    startButton.addEventListener('click', function() {
+ 
+//    })
+//    });
+
 const textElement = document.getElementById('text');
 const choicesElement = document.getElementById('choice-buttons');
 
@@ -69,7 +78,7 @@ function changeBackground(imageUrl) {
 const textNodes = [
     {
         id: 1,
-        text: 'You are woken by the feeling of light rain on your eyelids. You open your eyes to find yourself lying in a damp alleyway. The last thing you remember is going to sleep in your apartment. How the hell did you get here? You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?',
+        text: `You are woken by the feeling of light rain on your eyelids. You open your eyes to find yourself lying in a damp alleyway. The last thing you remember is going to sleep in your apartment. How the hell did you get here? You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
         imageUrl: '../images/alley.png',
         options: [
             {
