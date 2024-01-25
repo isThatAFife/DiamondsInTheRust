@@ -69,34 +69,35 @@ function changeBackground(imageUrl) {
 const textNodes = [
     {
         id: 1,
-        text: 'You wake up in an alley with no memories. On one side a man is telling you to follow him. [[follow]] The other direction leads to a busy road. [[other way]]',
+        text: 'You are woken by the feeling of light rain on your eyelids. You open your eyes to find yourself lying in a damp alleyway. The last thing you remember is going to sleep in your apartment. How the hell did you get here? You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?',
         imageUrl: '../images/alley.png',
         options: [
             {
-                text: 'follow',
+                text: 'Follow the man',
                 nextText: 2
             },
             {
-                text: 'other way',
+                text: 'Run the other way',
                 nextText: -1
+            },
+            {
+                text: 'Pick up the change',
+                setState: {change : true},
+                nextText: 4
             }
         ]
     },
     {
         id: 2,
-        text: 'He ushers you into a dingy bar populated by scum & villainy. Tells you to wait at the bar for a minute. While waiting, the bartender asks if you want a [[drink]]. If you say [[no]], he leaves you alone and you notice a card in front of you behind the bar. You can also run the [[other way]] ',
+        text: 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
         imageUrl: '../images/bar.png',
         options: [
             {
-                text: 'drink',
+                text: 'Go inside',
                 nextText: 3
             },
             {
-                text: 'no',
-                nextText: 3
-            },
-            {
-                text: 'other way',
+                text: 'Ask what\'\s going on',
                 nextText: 4
             },
         ]
@@ -117,6 +118,20 @@ const textNodes = [
     },
     {
         id: 4,
+        text: 'You gather the coins into the pocket of your leather jacket. "Hey, hurry up, we don\'\t have all day!" the man shouts gruffly.',
+        options: [
+            {
+                text: 'Follow the man',
+                nextText: 2
+            },
+            {
+                text: 'Run away',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 5,
         text: 'Game over',
         options: [
             {
@@ -124,7 +139,27 @@ const textNodes = [
                 nextText: -1
             }
         ]
-    }
+    },
+    {
+        id: 6,
+        text: 'Game over',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 7,
+        text: 'Game over',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    },
 ]
 
 startGame()
