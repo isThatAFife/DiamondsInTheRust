@@ -78,7 +78,7 @@ const textNodes = [
             },
             {
                 text: 'Run the other way',
-                nextText: -1
+                nextText: 5
             },
             {
                 text: 'Pick up the change',
@@ -98,13 +98,13 @@ const textNodes = [
             },
             {
                 text: 'Ask what\'\s going on',
-                nextText: 4
+                nextText: 6
             },
         ]
     },
     {
         id: 3,
-        text: 'He leads you into a back room filled with scattered prosthetic limbs and tells you to [[get in the blood-stained seat]]. Alternatively you can [[fight him and start running]]',
+        text: 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink, fight or fornicate. Sometimes you can\'\t tell which. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him.',
         options: [
             {
                 text: 'get in',
@@ -126,13 +126,13 @@ const textNodes = [
             },
             {
                 text: 'Run away',
-                nextText: -1
+                nextText: 5
             }
         ]
     },
     {
         id: 5,
-        text: 'Game over',
+        text: 'You turn and run as fast as you can. Right into oncoming traffic. You die.',
         options: [
             {
                 text: 'Restart',
