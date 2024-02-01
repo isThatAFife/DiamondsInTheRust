@@ -8,11 +8,18 @@ body {
     font-family: 'DotGothic16', sans-serif;
     color: #ffffff;
     text-align: center;
-    background: url(../images/cityscape-1-1280.webp) no-repeat;
+    background: url(../images/alley.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     letter-spacing: 0.2rem;
     font-weight: 900;
+}
+
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Heading */
