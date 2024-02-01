@@ -11,12 +11,17 @@ function startGame() {
     state = {}
     showTextNode(1)
 }
+// Change background
+function changeBackground(imageUrl) {
+    document.body.style.backgroundImage = "url('" + imageUrl + "')";
+}
 
 // Display option(s)
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
+    document.getElementById('image').src = textNode.img;
     // Remove all options before adding the ones we need
     while (choicesElement.firstChild) {
         choicesElement.removeChild(choicesElement.firstChild)
@@ -37,6 +42,8 @@ function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
 
+
+
 // Select an option
 
 function selectOption(option) {
@@ -50,17 +57,14 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
-// Change background
-function changeBackground(imageUrl) {
-    document.body.style.backgroundImage = "url('" + imageUrl + "')";
-}
+
 
 //  Array of objects for the story/choices
 
 const textNodes = [{
         id: 1,
         text: `You awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
-        imageUrl: '../images/alley.png',
+        img: "url('../images/alley.png')",
         options: [{
                 text: 'Follow the man',
                 nextText: 2
@@ -81,7 +85,7 @@ const textNodes = [{
     {
         id: 2,
         text: 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
-        imageUrl: '../images/bar.png',
+        img: '../images/bar.png',
         options: [{
             text: 'Go inside',
             nextText: 3
@@ -90,6 +94,7 @@ const textNodes = [{
     {
         id: 3,
         text: 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
+        img: '../images/bar.png',
         options: [{
                 text: 'Nothing',
                 nextText: 6

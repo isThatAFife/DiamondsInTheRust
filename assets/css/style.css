@@ -8,7 +8,7 @@ body {
     font-family: 'DotGothic16', sans-serif;
     color: #ffffff;
     text-align: center;
-    background: url(../images/alley.png) no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     letter-spacing: 0.2rem;
