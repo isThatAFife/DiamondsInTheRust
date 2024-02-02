@@ -26,17 +26,21 @@ function startGame() {
     state = {}
     showTextNode(1)
 }
-// Change background
-function changeBackground(imageUrl) {
-    document.body.style.backgroundImage = "url('" + imageUrl + "')";
-}
 
 // Display option(s)
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
-    // document.getElementById('image').src = textNode.img;
+
+    // Set the background image based on the text node, or use a default image if no img property is present
+    if (textNode.img) {
+        bgImage.style.backgroundImage = `url('${textNode.img}')`;
+    } else {
+        // Set a default image if no img property is present
+        bgImage.style.backgroundImage = `url('assets/images/cityscape-1-1280.webp')`;
+    }
+
     // Remove all options before adding the ones we need
     while (choicesElement.firstChild) {
         choicesElement.removeChild(choicesElement.firstChild)
@@ -77,7 +81,7 @@ function selectOption(option) {
 const textNodes = [{
         id: 1,
         text: `You awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
-        img: '../images/alley.png',
+        img: 'assets/images/alley.png',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
@@ -98,7 +102,7 @@ const textNodes = [{
     {
         id: 2,
         text: 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
-        img: '../images/bar.png',
+        img: 'assets/images/bar.png',
         options: [{
             text: 'Go inside',
             nextText: 3
