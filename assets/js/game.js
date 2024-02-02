@@ -1,17 +1,21 @@
 const textElement = document.getElementById('text');
 const choicesElement = document.getElementById('choice-buttons');
 let bgImage = document.getElementById('bgImage');
+var userName;
 
 //  Empty state object to keep track of choices made
 
 let state = {}
 
-// Move off welcome screen
+/**
+ * Once user has entered their name and clicked submit the game-space will be displayed.
+ * Will show alert if user doesn't enter a name.
+ */
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-button').addEventListener('click', function() {
-        var name = document.getElementById('name-input').value;
-        if (name) {
+        userName = document.getElementById('name-input').value;
+        if (userName) {
             document.getElementById('welcome').style.display = 'none';
             document.getElementById('game-space').style.display = 'block';
         } else {
@@ -74,13 +78,11 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
-
-
 //  Array of objects for the story/choices
 
 const textNodes = [{
         id: 1,
-        text: `You awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
+        text: `You, ${userName} awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
         img: 'assets/images/alley.png',
         options: [{
                 text: 'Follow the man',
