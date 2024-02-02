@@ -8,11 +8,10 @@ body {
     font-family: 'DotGothic16', sans-serif;
     color: #ffffff;
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     letter-spacing: 0.2rem;
     font-weight: 900;
+    min-height: 100vh;
+    margin: 0;
 }
 
 main {
@@ -31,10 +30,16 @@ main {
     font-size: 2.5rem;
 }
 
-/* Empty div to create space */
+/* Background Image Container */
 
-.empty {
-    padding: 2.5rem;
+#bgImage {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* Text area */
@@ -45,7 +50,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 50%;
     /* From https://css.glass */
     background: rgba(110, 244, 16, 0.4);
     border-radius: 16px;
