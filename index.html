@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Meta tags for search engines -->
-  <meta name="Description"
-  content="A choose your own adventure game set in a gritty near future city">
-<meta name="keywords"
-  content="cyberpunk, cyoa, adventure, choices, game, punk, scifi">
+    <!-- Meta tags for search engines -->
+    <meta name="Description" content="A choose your own adventure game set in a gritty near future city">
+    <meta name="keywords" content="cyberpunk, cyoa, adventure, choices, game, punk, scifi">
 
     <!-- Link to style sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -31,31 +29,34 @@
 <body>
     <header></header>
     <main>
-        <div id="image">
-        <div class="empty"></div>
-        <div id="container" class="container">
-            <!-- <div id="welcome">
-        <h1>Welcome</h1>
-        <label for="name-input">What is your name?</label>
-        <input type="text" id="name-input">
-        <button id="start-button">Open your eyes</button>
-    </div> -->
-            <div id="text" class="text">
-                text goes here
-            </div>
-            <div id="choice-buttons" class="btn-grid">
-                <button class="btn">option1</button>
-                <button class="btn">option2</button>
-                <button class="btn">option3</button>
-                <button class="btn">option4</button>
+        <div id="bgImage">
+            <div class="empty"></div>
+            <div id="container" class="container">
+                <div id="welcome">
+                    <h1>Welcome</h1>
+                    <label for="name-input">What is your name?</label>
+                    <input type="text" id="name-input">
+                    <button id="start-button">Open your eyes</button>
+                </div>
+                <div id="game-space" style="display: none;">
+                    <div id="text" class="text">
+                        text goes here
+                    </div>
+                    <div id="choice-buttons" class="btn-grid">
+                        <button class="btn">option1</button>
+                        <button class="btn">option2</button>
+                        <button class="btn">option3</button>
+                        <button class="btn">option4</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </main>
     <footer></footer>
+    <!-- Link to JS script -->
+<script src="assets/js/game.js"></script>
 </body>
 
-<!-- Link to JS script -->
-<script src="assets/js/game.js"></script>
+
 
 </html>

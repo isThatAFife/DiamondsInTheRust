@@ -1,9 +1,24 @@
 const textElement = document.getElementById('text');
 const choicesElement = document.getElementById('choice-buttons');
+let bgImage = document.getElementById('bgImage');
 
 //  Empty state object to keep track of choices made
 
 let state = {}
+
+// Move off welcome screen
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('start-button').addEventListener('click', function() {
+        var name = document.getElementById('name-input').value;
+        if (name) {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('game-space').style.display = 'block';
+        } else {
+            alert('Please enter a name')
+        }
+    });
+});
 
 // Start the game
 
@@ -21,7 +36,7 @@ function changeBackground(imageUrl) {
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
-    document.getElementById('image').src = textNode.img;
+    // document.getElementById('image').src = textNode.img;
     // Remove all options before adding the ones we need
     while (choicesElement.firstChild) {
         choicesElement.removeChild(choicesElement.firstChild)
@@ -41,8 +56,6 @@ function showTextNode(textNodeIndex) {
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
-
-
 
 // Select an option
 
@@ -64,7 +77,7 @@ function selectOption(option) {
 const textNodes = [{
         id: 1,
         text: `You awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
-        img: "url('../images/alley.png')",
+        img: '../images/alley.png',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
