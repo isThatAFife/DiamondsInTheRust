@@ -4,6 +4,8 @@ let textNodeIndex = 0;
 let bgImage = document.getElementById('bgImage');
 const textElement = document.getElementById('text');
 const choicesElement = document.getElementById('choice-buttons');
+document.body.style.backgroundImage = "url('assets/images/cityscape-1-1280.webp')";
+document.body.style.backgroundSize = "cover";
 
 
 const textNodes = [{
@@ -39,7 +41,7 @@ const textNodes = [{
     {
         id: 3,
         text: () => 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
-        img: '../images/bar.png',
+        img: 'assets/images/bar.png',
         options: [{
                 text: 'Nothing',
                 nextText: 6
@@ -62,6 +64,7 @@ const textNodes = [{
     {
         id: 4,
         text: () => 'You gather the coins into the pocket of your leather jacket. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
+        img: 'assets/images/alley.png',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
