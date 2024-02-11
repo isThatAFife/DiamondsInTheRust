@@ -29,7 +29,7 @@ const textNodes = [{
     },
     {
         id: 2,
-        text: 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
+        text: () => 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
         img: 'assets/images/bar.png',
         options: [{
             text: 'Go inside',
@@ -38,7 +38,7 @@ const textNodes = [{
     },
     {
         id: 3,
-        text: 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
+        text: () => 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
         img: '../images/bar.png',
         options: [{
                 text: 'Nothing',
@@ -61,7 +61,7 @@ const textNodes = [{
     },
     {
         id: 4,
-        text: 'You gather the coins into the pocket of your leather jacket. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
+        text: () => 'You gather the coins into the pocket of your leather jacket. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
@@ -74,7 +74,7 @@ const textNodes = [{
     },
     {
         id: 5,
-        text: 'You turn and run as fast as you can. Right into oncoming traffic. You die.',
+        text: () => 'You turn and run as fast as you can. Right into oncoming traffic. You die.',
         options: [{
             text: 'Restart',
             nextText: -1
@@ -82,7 +82,7 @@ const textNodes = [{
     },
     {
         id: 6,
-        text: 'Game over',
+        text: () => 'Game over',
         options: [{
             text: 'Restart',
             nextText: -1
@@ -90,7 +90,7 @@ const textNodes = [{
     },
     {
         id: 7,
-        text: 'The barkeep squints at you for a moment before reaching under the counter and placing a glass full of murky, yellowish "water" in front of you. You take a sip and your organs immediately shut down due to the extreme toxicity of the tap water. That was a bad idea. Game over.',
+        text: () => 'The barkeep squints at you for a moment before reaching under the counter and placing a glass full of murky, yellowish "water" in front of you. You take a sip and your organs immediately shut down due to the extreme toxicity of the tap water. That was a bad idea. Game over.',
         options: [{
             text: 'Restart',
             nextText: -1
@@ -98,7 +98,7 @@ const textNodes = [{
     },
     {
         id: 8,
-        text: 'He reaches behind the bar and places a tiny shot glass full of brown liquid in front of you. As you pick it up the vapours begin to sting your eyes. You down the glass in one and immediately feel a warm fuzzy feeling rise up inside you. Skrunk eyes you as if to ask whether that was a good idea or not but doesn\'\t say anything. He leads you to the back of the bar and through a door with KEEP OUT scratched into it.',
+        text: () => 'He reaches behind the bar and places a tiny shot glass full of brown liquid in front of you. As you pick it up the vapours begin to sting your eyes. You down the glass in one and immediately feel a warm fuzzy feeling rise up inside you. Skrunk eyes you as if to ask whether that was a good idea or not but doesn\'\t say anything. He leads you to the back of the bar and through a door with KEEP OUT scratched into it.',
         options: [{
                 text: 'option 1',
                 nextText: 9
@@ -136,11 +136,23 @@ function showTextNode(textNode) {
             choicesElement.appendChild(button)
         }
     })
+
+    function selectOption(option) {
+        const nextTextNodeId = option.nextText;
+        if (nextTextNodeId === -1) {
+            // Reset the game
+            state = {}; // Reset the game state
+            textNodeIndex = 0; // Reset the text node index
+            showTextNode(textNodes[textNodeIndex]); // Show the initial text node
+        } else {
+            state = Object.assign(state, option.setState);
+            const nextNode = textNodes.find(node => node.id === nextTextNodeId);
+            showTextNode(nextNode);
+        }
+    }
 }
 
-function showOption(option) {
-    return option.requiredState == null || option.requiredState(state)
-}
+
 
 function getUserName() {
     const startButton = document.getElementById('start-button')
@@ -154,5 +166,5 @@ function getUserName() {
 
 function initGame() {
     getUserName();
-};
+}
 initGame();
