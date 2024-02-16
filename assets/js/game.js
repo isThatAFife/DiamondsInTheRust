@@ -85,10 +85,11 @@ const textNodes = [{
     },
     {
         id: 6,
-        text: () => 'Game over',
+        text: () => '"Fair enough" He says',
+        img: 'assets/images/bar.webp',
         options: [{
-            text: 'Restart',
-            nextText: -1
+            text: 'Continue',
+            nextText: 8
         }]
     },
     {
