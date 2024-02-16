@@ -11,7 +11,7 @@ document.body.style.backgroundSize = "cover";
 const textNodes = [{
         id: 1,
         text: (value) => `You, ${value} awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
-        img: 'assets/images/alley.png',
+        img: 'assets/images/alley.webp',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
@@ -32,7 +32,7 @@ const textNodes = [{
     {
         id: 2,
         text: () => 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
-        img: 'assets/images/bar.png',
+        img: 'assets/images/bar.webp',
         options: [{
             text: 'Go inside',
             nextText: 3
@@ -41,7 +41,7 @@ const textNodes = [{
     {
         id: 3,
         text: () => 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
-        img: 'assets/images/bar.png',
+        img: 'assets/images/bar.webp',
         options: [{
                 text: 'Nothing',
                 nextText: 6
@@ -64,7 +64,7 @@ const textNodes = [{
     {
         id: 4,
         text: () => 'You gather the coins into the pocket of your leather jacket. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
-        img: 'assets/images/alley.png',
+        img: 'assets/images/alley.webp',
         options: [{
                 text: 'Follow the man',
                 nextText: 2
@@ -161,6 +161,7 @@ function getUserName() {
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', function () {
         const inputElement = document.getElementById('name-input');
+        // Checks whether text has been entered to name-input and displays an alert if not
         if (inputElement.value.trim() !== '') {
             userName = inputElement.value;
             document.getElementById('welcome').style.display = 'none';
