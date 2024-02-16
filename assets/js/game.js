@@ -158,14 +158,19 @@ function showTextNode(textNode) {
 
 
 function getUserName() {
-    const startButton = document.getElementById('start-button')
+    const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', function () {
-        userName = document.getElementById('name-input').value;
-        document.getElementById('welcome').style.display = 'none';
-        document.getElementById('game-space').style.display = 'block';
-        showTextNode(textNodes[textNodeIndex]);
+        const inputElement = document.getElementById('name-input');
+        if (inputElement.value.trim() !== '') {
+            userName = inputElement.value;
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('game-space').style.display = 'block';
+            showTextNode(textNodes[textNodeIndex]);
+        } else {
+            alert('Please enter a name')
+        }
     });
-};
+}
 
 function initGame() {
     getUserName();
