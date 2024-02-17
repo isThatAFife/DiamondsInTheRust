@@ -1,3 +1,5 @@
+//Global variables
+
 let state = {};
 let userName = null;
 let textNodeIndex = 0;
@@ -7,6 +9,7 @@ const choicesElement = document.getElementById('choice-buttons');
 document.body.style.backgroundImage = "url('assets/images/cityscape-1-1280.webp')";
 document.body.style.backgroundSize = "cover";
 
+// Text nodes array
 
 const textNodes = [{
         id: 1,
@@ -120,6 +123,11 @@ const textNodes = [{
     }
 ]
 
+/**
+ * 
+ * @param {*} textNode 
+ */
+
 function showTextNode(textNode) {
     textElement.innerText = textNode.text(userName)
 
@@ -141,6 +149,11 @@ function showTextNode(textNode) {
         }
     })
 
+    /**
+     * 
+     * @param {*} option 
+     */
+
     function selectOption(option) {
         const nextTextNodeId = option.nextText;
         if (nextTextNodeId === -1) {
@@ -156,7 +169,9 @@ function showTextNode(textNode) {
     }
 }
 
-
+/**
+ * 
+ */
 
 function getUserName() {
     const startButton = document.getElementById('start-button');
@@ -173,6 +188,10 @@ function getUserName() {
         }
     });
 }
+
+/**
+ * 
+ */
 
 function initGame() {
     getUserName();
