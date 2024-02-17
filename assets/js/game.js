@@ -13,7 +13,8 @@ document.body.style.backgroundSize = "cover";
 
 const textNodes = [{
         id: 1,
-        text: (value) => `You, ${value} awake to find yourself lying in a damp alleyway with no memory of how you got here. You look around and notice a man at one end of the alleyway motioning for you to follow him. The other side of the alley leads to a busy road. Looking around more you notice someone has dumped some small change on you while you were unconscious. What do you do?`,
+        text: (value) => `"Hey! Hey, ${value}! Wake up, we've got a job to do!"
+        You slowly open your eyes to find yourself lying in a damp alleyway with no memory of how you got there. A man in a leather jacket with some cheap-looking eye augmentations is waving at you. You don't recognise him but he seems to know who you are. He is motioning for you to follow him. You notice that someone decided to toss some coins on you while you were unconscious. What do you do?`,
         img: 'assets/images/alley.webp',
         options: [{
                 text: 'Follow the man',
@@ -66,7 +67,7 @@ const textNodes = [{
     },
     {
         id: 4,
-        text: () => 'You gather the coins into the pocket of your leather jacket. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
+        text: () => 'You gather the coins into the pocket of your jacket.',
         img: 'assets/images/alley.webp',
         options: [{
                 text: 'Follow the man',
@@ -92,7 +93,7 @@ const textNodes = [{
         img: 'assets/images/bar.webp',
         options: [{
             text: 'Continue',
-            nextText: 8
+            nextText: 9
         }]
     },
     {
@@ -124,8 +125,12 @@ const textNodes = [{
 ]
 
 /**
+ * The `showTextNode` function is responsible for displaying the text content, background image, and choices based on the provided `textNode` object.
  * 
- * @param {*} textNode 
+ * @function
+ * @name showTextNode
+ * @kind function
+ * @param {any} textNode
  */
 
 function showTextNode(textNode) {
@@ -138,7 +143,11 @@ function showTextNode(textNode) {
     while (choicesElement.firstChild) {
         choicesElement.removeChild(choicesElement.firstChild)
     }
-
+    
+    /**
+     * The `textNode.options.forEach(option => {` is iterating over each option object within the `options` array of the current `textNode`. For each option, it is creating a button element in the HTML with the text of the option, adding a 'btn' class to the button, and attaching a click event listener that calls the `selectOption(option)` function when the button is clicked. This allows the user to interact with the game by selecting different choices presented to them based on the current text node.
+     * 
+     */
     textNode.options.forEach(option => {
         if (option.requiredState == null || option.requiredState(state)) {
             const button = document.createElement('button')
@@ -150,17 +159,21 @@ function showTextNode(textNode) {
     })
 
     /**
+     * The `selectOption(option)` function is responsible for handling the user's choice selection in the game. Here is a breakdown of what the function does:
      * 
-     * @param {*} option 
+     * @function
+     * @name selectOption
+     * @kind function
+     * @memberof showTextNode
+     * @param {any} option
      */
-
     function selectOption(option) {
         const nextTextNodeId = option.nextText;
         if (nextTextNodeId === -1) {
             // Reset the game
-            state = {}; // Reset the game state
-            textNodeIndex = 0; // Reset the text node index
-            showTextNode(textNodes[textNodeIndex]); // Show the initial text node
+            state = {}; 
+            textNodeIndex = 0; 
+            showTextNode(textNodes[textNodeIndex]);
         } else {
             state = Object.assign(state, option.setState);
             const nextNode = textNodes.find(node => node.id === nextTextNodeId);
@@ -170,9 +183,12 @@ function showTextNode(textNode) {
 }
 
 /**
+ * The `getUserName()` function is responsible for retrieving the user's name from the input element and starting the game. It adds an event listener to the start button so that when the button is clicked, it checks if a name has been entered in the input field. If a name is entered, it sets the `userName` variable to the entered value, hides the welcome screen, displays the game space, and then calls the `showTextNode()` function with the first text node to start the game. If no name is entered, it displays an alert asking the user to enter a name.
  * 
+ * @function
+ * @name getUserName
+ * @kind function
  */
-
 function getUserName() {
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', function () {
@@ -190,9 +206,8 @@ function getUserName() {
 }
 
 /**
- * 
+ * Initializes the game by calling the getUserName function.
  */
-
 function initGame() {
     getUserName();
 }
