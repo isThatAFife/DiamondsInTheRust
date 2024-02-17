@@ -128,3 +128,70 @@ I have been mindful during coding to ensure that the website is as accessible fr
   - Ensuring that there is a sufficient colour contrast throughout the site.
 
   ---
+
+  ## Technologies Used
+
+  ### Languages Used
+
+  HTML5, CSS and JavaScript were used to create this website.
+
+  ### Frameworks, Libraries & Programs Used
+
+  Balsamiq - Used to create wireframes.
+
+  Git - For version control.
+
+  Github - To save and store the files for the website.
+
+  Google Fonts - To import the fonts used on the website.
+
+  Font Awesome - For the iconography on the website.
+
+  Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+  fooocus - To generate background images using AI.
+
+  [Tiny PNG](https://tinypng.com/) To compress images.
+
+  [Pixlied](https://pixelied.com) To convert images to webp format.
+
+  [Favicon.io](https://favicon.io/) To create favicon.
+
+  [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+
+  ---
+
+## Deployment & Local Development
+
+### Deployment
+
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
+
+1. Log in (or sign up) to Github.
+2. Find the repository for this project, DiamondsInTheRust.
+3. Click on the Settings link.
+4. Click on the Pages link in the left hand side navigation bar.
+5. In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+6. Click Save. Your live Github Pages site is now deployed at the URL shown.
+
+### Local Development
+
+#### How to Fork
+
+To fork the DiamondsInTheRust repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, isthatafife/DiamondsInTheRust.
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the DiamondsInTheRust repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, isthatafife/DiamondsInTheRust.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+---
