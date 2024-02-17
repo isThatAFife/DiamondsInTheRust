@@ -102,8 +102,8 @@ Wireframes were created for mobile and desktop.
 
 [Desktop]
 
-[Mobile]: docs/wireframes/mm-wireframe-1.png
-[Desktop]: docs/wireframes/mm-wireframe-2.png
+[Mobile]: docs/wireframes/DITR_Mobile.png
+[Desktop]: docs/wireframes/DITR_Desktop.png
 
 ## Features
 
