@@ -35,20 +35,11 @@ const textNodes = [{
     },
     {
         id: 2,
-        text: () => 'You push yourself to your feet and follow the man. Upon closer inspection you notice his mechanical prosthetic eye. This is somewhat less of a shock to you than his odor. "Alright, you must be the guy. They told me you\'\d be here. The name\'\s Skrunk. Come on, let\'\s go inside and get started." He motions to the door of a nearby bar and ushers you inside.',
+        text: () => 'You push yourself to your feet and follow the man into a nearby bar. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. The bartender looks at you and asks "What\'\ll it be?',
         img: 'assets/images/bar.webp',
         options: [{
-            text: 'Go inside',
-            nextText: 3
-        }, ]
-    },
-    {
-        id: 3,
-        text: () => 'You enter the bar and your senses are immediately assailed from all sides. There is RustPunk music blaring from speakers in the corner while the various occupants of the bar drink and/or fight each other. You notice a man with heavy metal prosthetics lying on a pool table in the corner while his "friends" appear to be performing impromptu surgery on him. The bartender looks at you and asks "What\'\ll it be?',
-        img: 'assets/images/bar.webp',
-        options: [{
-                text: 'Nothing',
-                nextText: 6
+                text: 'Say nothing and continue following the man',
+                nextText: 3
             },
             {
                 text: 'A glass of water please',
@@ -62,6 +53,30 @@ const textNodes = [{
                     drunk: true
                 },
                 nextText: 8
+            }
+        ]
+    },
+    {
+        id: 3,
+        text: () => `He leads you to the back through a door with "KEEP OUT" scratched into it. Beyond the door you discover what seems to be a surgery, although everything is crusted in dirt and blood.
+        "Alright, the client has requested some very specific, very expensive upgrades before you take on this job. Take a seat and I'll get them installed lickety-split"`,
+        img: 'assets/images/surgery.webp',
+        options: [{
+                text: 'Lie down',
+                nextText: 6
+            },
+            {
+                text: 'Refuse',
+                nextText: 9
+            },
+            {
+                text: 'Run away',
+                nextText: 10
+            },
+            {
+                text: '"Sssssure, shounds great!" (drunk)',
+                requiredState: (currentState) => currentState.drunk,
+                nextText: 12
             }
         ]
     },
@@ -106,19 +121,15 @@ const textNodes = [{
     },
     {
         id: 8,
-        text: () => 'He reaches behind the bar and places a tiny shot glass full of brown liquid in front of you. As you pick it up the vapours begin to sting your eyes. You down the glass in one and immediately feel a warm fuzzy feeling rise up inside you. Skrunk eyes you as if to ask whether that was a good idea or not but doesn\'\t say anything. He leads you to the back of the bar and through a door with KEEP OUT scratched into it.',
+        text: () => 'He reaches behind the bar and places a tiny shot glass full of brown liquid in front of you. As you pick it up the vapours begin to sting your eyes. You down the glass in one and immediately feel a warm fuzzy feeling rise up inside you.',
         options: [{
-                text: 'option 1',
-                nextText: 9
+                text: 'Follow the greasy man to the back of the bar',
+                nextText: 3
             },
             {
-                text: 'option 2',
-                nextText: 10
-            },
-            {
-                text: 'This option only appears if you are drunk',
+                text: 'Ask for another',
                 requiredState: (currentState) => currentState.drunk,
-                nextText: 11
+                nextText: 7
             }
         ]
     }
@@ -143,7 +154,7 @@ function showTextNode(textNode) {
     while (choicesElement.firstChild) {
         choicesElement.removeChild(choicesElement.firstChild)
     }
-    
+
     /**
      * The `textNode.options.forEach(option => {` is iterating over each option object within the `options` array of the current `textNode`. For each option, it is creating a button element in the HTML with the text of the option, adding a 'btn' class to the button, and attaching a click event listener that calls the `selectOption(option)` function when the button is clicked. This allows the user to interact with the game by selecting different choices presented to them based on the current text node.
      * 
@@ -171,8 +182,8 @@ function showTextNode(textNode) {
         const nextTextNodeId = option.nextText;
         if (nextTextNodeId === -1) {
             // Reset the game
-            state = {}; 
-            textNodeIndex = 0; 
+            state = {};
+            textNodeIndex = 0;
             showTextNode(textNodes[textNodeIndex]);
         } else {
             state = Object.assign(state, option.setState);
