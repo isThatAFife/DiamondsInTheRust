@@ -232,3 +232,29 @@ I used Lighthouse within the Chrome Developer Tools to allow me to test the perf
 To fully test my website I performed the following testing using a number of browsers (Chrome, Safari, Mozilla Firefox, Duckduckgo) and devices (Mac Studio M1 Ultra, Macbook Pro 16", OnePlus 10 Android phone, iPhone 13 pro).
 
 I also viewed both pages in Chrome developer tools to ensure they were responsive on all screen sizes.
+
+---
+
+## Credits
+
+### Code Used
+
+Some of the code required to get the user's name and return it within the game was either provided or inspired by John & Sean of CI Tutor support.
+
+Game structure was inspired by youtube tutorials by [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified), [Kevin Briggs](https://www.youtube.com/@kevinbriggs8354) and [Galvanize/Lee Ngo](https://github.com/GalvanizeOpenSource/Learn-To-Code-JavaScript-2/)
+
+Main text area styling from [CSS Glass](https://css.glass/)
+
+### Media
+
+All background images created using [fooocus](https://github.com/lllyasviel/Fooocus) AI generator
+
+### Acknowledgements
+
+I would like to thank the following people who helped me along the way in completing my second milestone project:
+
+[Lauren-Nicole Popich](https://github.com/CluelessBiker) - My Code Institute mentor
+
+John & Sean of CI tutor support
+
+Everyone in the Nov2023-lwetb cohort!
