@@ -176,7 +176,7 @@ const textNodes = [{
             nextText: -1
         }]
     }
-]
+];
 
 /**
  * The `showTextNode` function is responsible for displaying the text content, background image, and choices based on the provided `textNode` object.
@@ -188,14 +188,14 @@ const textNodes = [{
  */
 
 function showTextNode(textNode) {
-    textElement.innerText = textNode.text(userName)
+    textElement.innerText = textNode.text(userName);
 
     // Set the background image based on the text node, or use a default image if no img property is present
     if (textNode.img) bgImage.style.backgroundImage = `url('${textNode.img}')`;
     else bgImage.style.backgroundImage = `url('assets/images/cityscape-1-1280.webp')`;
 
     while (choicesElement.firstChild) {
-        choicesElement.removeChild(choicesElement.firstChild)
+        choicesElement.removeChild(choicesElement.firstChild);
     }
 
     /**
@@ -204,13 +204,13 @@ function showTextNode(textNode) {
      */
     textNode.options.forEach(option => {
         if (option.requiredState == null || option.requiredState(state)) {
-            const button = document.createElement('button')
-            button.innerText = option.text
-            button.classList.add('btn')
-            button.addEventListener('click', () => selectOption(option))
-            choicesElement.appendChild(button)
+            const button = document.createElement('button');
+            button.innerText = option.text;
+            button.classList.add('btn');
+            button.addEventListener('click', () => selectOption(option));
+            choicesElement.appendChild(button);
         }
-    })
+    });
 
     /**
      * The `selectOption(option)` function is responsible for handling the user's choice selection in the game. Here is a breakdown of what the function does:
@@ -254,7 +254,7 @@ function getUserName() {
             document.getElementById('game-space').style.display = 'block';
             showTextNode(textNodes[textNodeIndex]);
         } else {
-            alert('Please enter a name')
+            alert('Please enter a name');
         }
     });
 }

@@ -203,11 +203,15 @@ Testing was ongoing throughout the entire build of the website. I used Chrome de
 
 ### JSHint
 
+![game.js](docs/validators/jshint.png)
+
 ### W3C Validator
 
-[Main page HTML](docs/testing/validator/w3c-index.png)
+![Main page HTML](docs/validators/w3chtml.png)
 
 ### Jigsaw CSS Validator
+
+![style.css](docs/validators/jigsawcss.png)
 
 ### Solved Bugs
 
