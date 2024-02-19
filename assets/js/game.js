@@ -141,24 +141,24 @@ const textNodes = [{
         text: () => 'The autocar takes you to a run-down motel on the outskirts of the city. When you arrive it appears to be deserted. What do you do?',
         img: 'assets/images/motel.webp',
         options: [{
-            text: 'Start shooting randomly at the motel rooms (drunk)',
-            requiredState: (currentState) => currentState.drunk,
-            nextText: 11
-        },
-        {
-            text: 'Use the knowledge you gained from the surgery to approach the correct room',
-            requiredState: (currentState) => currentState.brief,
-            nextText: 12
-        },
-        {
-            text: 'Wait and see what happens',
-            nextText: 13
-        },
-        {
-            text: 'Start randomly knocking on doors',
-            nextText: 14
-        }
-    ]
+                text: 'Start shooting randomly at the motel rooms (drunk)',
+                requiredState: (currentState) => currentState.drunk,
+                nextText: 11
+            },
+            {
+                text: 'Use the info uploaded by Jimbo to approach the correct room',
+                requiredState: (currentState) => currentState.brief,
+                nextText: 12
+            },
+            {
+                text: 'Wait and see what happens',
+                nextText: 13
+            },
+            {
+                text: 'Start randomly knocking on doors',
+                nextText: 14
+            }
+        ]
     },
     {
         id: 10,
@@ -174,6 +174,88 @@ const textNodes = [{
         options: [{
             text: 'Game over',
             nextText: -1
+        }]
+    },
+    {
+        id: 12,
+        text: () => 'You approach the room. You can hear some muffled noises from inside but otherwise all is still and quiet.',
+        options: [{
+                text: 'Kick the door down and rush in gun-first',
+                nextText: 16
+            },
+            {
+                text: 'Knock politely',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 13,
+        text: () => 'You decide to wait for a while and see what happens. Not much happens until about ten minutes later, when you see a flicker of movement in one of the windows.',
+        options: [{
+                text: 'Start shooting randomly at the motel rooms (drunk)',
+                requiredState: (currentState) => currentState.drunk,
+                nextText: 11
+            },
+            {
+                text: 'Go to the room where you saw the movement',
+                nextText: 12
+            },
+            {
+                text: 'Start randomly knocking on doors',
+                nextText: 14
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: () => 'You begin knocking on random doors but it seems the place really is abandoned. There isn\'\t even anyone manning the reception desk. After knocking on various doors for a while you eventually come to room 304. You can hear some muffled noises from inside, the first signs of life you\'\ve noticed here.',
+        options: [{
+                text: 'Knock politely',
+                nextText: 15
+            },
+            {
+                text: 'Kick the door down and rush in gun-first',
+                nextText: 16
+            }
+        ]
+    },
+    {
+        id: 15,
+        text: () => 'You rap the door three times and after a moment of silence a man\'\s voice answers answers. "Um... Who is it?"',
+        options: [{
+                text: 'Housekeeping!',
+                nextText: 17
+            },
+            {
+                text: 'Assassin!',
+                nextText: 18
+            },
+            {
+                text: 'It\'\sh yer besht friend, Bill! Let me in old buddy! (hic)',
+                requiredState: (currentState) => currentState.drunk,
+                nextText: 19
+            }
+        ]
+    },
+    {
+        id: 16,
+        text: () => 'You slam your boot into the door and it swings open. Sitting on the bed in front of you is the man your cyberbrain is telling you to kill. You aim the pistol at his head.',
+        options: [{
+            text: 'Pull the trigger',
+            nextText: 20
+        },
+        {
+            text: 'Pull the trigger',
+            nextText: 20
+        },
+        {
+            text: 'Pull the trigger',
+            nextText: 20
+        },
+        {
+            text: 'Pull the trigger',
+            nextText: 20
         }]
     }
 ];
