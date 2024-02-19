@@ -195,3 +195,40 @@ To clone the DiamondsInTheRust repository:
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ---
+
+## Testing
+
+Testing was ongoing throughout the entire build of the website. I used Chrome developer tools, JSHint and Perplexity AI during development to troubleshoot issues.
+
+### JSHint
+
+### W3C Validator
+
+[Main page HTML](docs/testing/validator/w3c-index.png)
+
+### Jigsaw CSS Validator
+
+### Solved Bugs
+
+1. Initially the game would return "undefined" or nothing at all instead of the user's input on the welcome screen. This was because the game was being started before the userName variable was updated. With the help of tutor support I was able to rearrange the code and order of execution, creating a new getUserName() function and placing it inside the initGame() function, ensuring it would return the updated variable when the game started.
+2. If there was no img property in a text node, or if there was no text node ID, the background was not displayed. This was fixed by adding an if/else statement to the showTextNode function that would display a default image if there was no img property present.
+
+### Known Bugs
+
+1. Sometimes when loading a new scene, the default image will be displayed first before loading in the correct scene image.
+
+### Lighthouse
+
+I used Lighthouse within the Chrome Developer Tools to allow me to test the performance, accessibility, best practices and SEO of the website.
+
+#### Main Page
+
+[Lighthouse Testing for Desktop - Test 1](docs/testing/lighthouse/DITR_Lighthouse_Desktop.pdf)
+
+[Lighthouse Testing for Mobile - Test 1](docs/testing/lighthouse/DITR_Lighthouse_Mobile.pdf)
+
+### Full Testing
+
+To fully test my website I performed the following testing using a number of browsers (Chrome, Safari, Mozilla Firefox, Duckduckgo) and devices (Mac Studio M1 Ultra, Macbook Pro 16", OnePlus 10 Android phone, iPhone 13 pro).
+
+I also viewed both pages in Chrome developer tools to ensure they were responsive on all screen sizes.
