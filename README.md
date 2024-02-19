@@ -3,9 +3,9 @@ A choose-your-own-adventure style game set in a cyberpunk future.
 
 Find the live site [here]
 
-[here]: https://isthatafife.github.io/
+[here]: https://isthatafife.github.io/DiamondsInTheRust/
 
-![screenshot of site responsiveness](docs/screenshots/screenshot.png)
+![screenshot of site responsiveness](docs/screenshots/amiresponsive.png)
 
 ## Contents
 
@@ -80,7 +80,7 @@ Find the live site [here]
 
 ## Design
 
-The website uses many typical "cyberpunk" design choices - The background images contrast a grungy, dirty cityscape with bright neon pink and blue hues while the main game area is made to look like an old-school computer terminal with a dot matrix font and typing animations.
+The website uses many typical "cyberpunk" design choices - The background images contrast a grungy, dirty cityscape with bright neon pink and blue hues while the main game area is made to look like an old-school computer terminal with a dot matrix font.
 
 ### Typography
 
@@ -113,11 +113,12 @@ The player will be able to make choices early on that will affect what other cho
 
 Once players reach the end by either completing the story or reaching a GAME OVER screen, they will be presented with a button to restart from the beginning.
 
-Choices can be made either by clicking the buttons or using number keys 1-4.
+Choices can be made by clicking the buttons.
 
 ### Future Implementations
 
   - Add a soundtrack and sound effects to further immerse the player.
+  - Add keyboard functionality, so the user can instead use keyboard keys 1-4 instead of clicking the buttons.
 
 ## Accessibility
 
