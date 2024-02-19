@@ -79,7 +79,7 @@ const textNodes = [{
             {
                 text: '"Sssssure, shounds great!" (drunk)',
                 requiredState: (currentState) => currentState.drunk,
-                nextText: 12
+                nextText: 6
             }
         ]
     },
