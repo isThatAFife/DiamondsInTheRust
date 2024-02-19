@@ -363,4 +363,5 @@ function getUserName() {
 function initGame() {
     getUserName();
 }
+
 initGame();

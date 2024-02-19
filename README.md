@@ -102,8 +102,8 @@ Wireframes were created for mobile and desktop.
 
 [Desktop]
 
-[Mobile]: docs/wireframes/DITR_Mobile.png
-[Desktop]: docs/wireframes/DITR_Desktop.png
+[Mobile]: docs/wireframes/ditrmobile.png
+[Desktop]: docs/wireframes/ditrdesktop.png
 
 ## Features
 
@@ -117,7 +117,7 @@ Choices can be made by clicking the buttons.
 
 ### Future Implementations
 
-  - Add a soundtrack and sound effects to further immerse the player.
+  - Add a soundtrack and sound effects to further immerse the player. The soundtrack will start off disabled and players can unmute when/if they want.
   - Add keyboard functionality, so the user can instead use keyboard keys 1-4 instead of clicking the buttons.
 
 ## Accessibility
@@ -228,9 +228,9 @@ I used Lighthouse within the Chrome Developer Tools to allow me to test the perf
 
 #### Main Page
 
-[Lighthouse Testing for Desktop - Test 1](docs/testing/lighthouse/DITR_Lighthouse_Desktop.pdf)
+[Lighthouse Testing for Desktop - Test 1](docs/testing/lighthouse/ditr-lighthouse-desktop.pdf)
 
-[Lighthouse Testing for Mobile - Test 1](docs/testing/lighthouse/DITR_Lighthouse_Mobile.pdf)
+[Lighthouse Testing for Mobile - Test 1](docs/testing/lighthouse/ditr-lighthouse-mobile.pdf)
 
 ### Full Testing
 
