@@ -117,6 +117,7 @@ const textNodes = [{
     {
         id: 7,
         text: () => 'The barkeep squints at you for a moment before reaching under the counter and placing a glass full of murky, yellowish "water" in front of you. You take a sip and your organs immediately shut down due to the extreme toxicity of the tap water. That was a bad idea. Game over.',
+        img: 'assets/images/bar.webp',
         options: [{
             text: 'Restart',
             nextText: -1
@@ -125,6 +126,7 @@ const textNodes = [{
     {
         id: 8,
         text: () => 'He reaches behind the bar and places a tiny shot glass full of brown liquid in front of you. As you pick it up the vapours begin to sting your eyes. You down the glass in one and immediately feel a warm fuzzy feeling rise up inside you.',
+        img: 'assets/images/bar.webp',
         options: [{
                 text: 'Follow the greasy man to the back of the bar',
                 nextText: 3
@@ -163,6 +165,7 @@ const textNodes = [{
     {
         id: 10,
         text: () => 'He says you\'\re crazy for turning it down but he won\'\t force you. He hands you a gun and says there\'\s a car waiting outside for you. They want you to off some corpo type but that\'\s all he knows',
+        img: 'assets/images/surgery.webp',
         options: [{
             text: 'Get in the autocar',
             nextText: 9
@@ -171,6 +174,7 @@ const textNodes = [{
     {
         id: 11,
         text: () => 'You start firing wildly at the motel until some of the doors burst open, revealing state of the art security bots. They waste no time in shredding you to pieces in a hail of lead.',
+        img: 'assets/images/motel.webp',
         options: [{
             text: 'Game over',
             nextText: -1
@@ -179,6 +183,7 @@ const textNodes = [{
     {
         id: 12,
         text: () => 'You approach the room. You can hear some muffled noises from inside but otherwise all is still and quiet.',
+        img: 'assets/images/motel.webp',
         options: [{
                 text: 'Kick the door down and rush in gun-first',
                 nextText: 16
@@ -192,6 +197,7 @@ const textNodes = [{
     {
         id: 13,
         text: () => 'You decide to wait for a while and see what happens. Not much happens until about ten minutes later, when you see a flicker of movement in one of the windows.',
+        img: 'assets/images/motel.webp',
         options: [{
                 text: 'Start shooting randomly at the motel rooms (drunk)',
                 requiredState: (currentState) => currentState.drunk,
@@ -210,6 +216,7 @@ const textNodes = [{
     {
         id: 14,
         text: () => 'You begin knocking on random doors but it seems the place really is abandoned. There isn\'\t even anyone manning the reception desk. After knocking on various doors for a while you eventually come to room 304. You can hear some muffled noises from inside, the first signs of life you\'\ve noticed here.',
+        img: 'assets/images/motel.webp',
         options: [{
                 text: 'Knock politely',
                 nextText: 15
@@ -223,6 +230,7 @@ const textNodes = [{
     {
         id: 15,
         text: () => 'You rap the door three times and after a moment of silence a man\'\s voice answers answers. "Um... Who is it?"',
+        img: 'assets/images/motel.webp',
         options: [{
                 text: 'Housekeeping!',
                 nextText: 17
@@ -241,6 +249,7 @@ const textNodes = [{
     {
         id: 16,
         text: () => 'You slam your boot into the door and it swings open. Sitting on the bed in front of you is the man your cyberbrain is telling you to kill. You aim the pistol at his head.',
+        img: 'assets/images/motelroom.webp',
         options: [{
             text: 'Pull the trigger',
             nextText: 20
@@ -256,6 +265,13 @@ const textNodes = [{
         {
             text: 'Pull the trigger',
             nextText: 20
+        }]
+    },
+    {
+        id: 17,
+        text: () => '',
+        options: [{
+            
         }]
     }
 ];
