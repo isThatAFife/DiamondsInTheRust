@@ -58,20 +58,23 @@ const textNodes = [{
     },
     {
         id: 3,
-        text: () => `He leads you to the back through a door with "KEEP OUT" scratched into it. Beyond the door you discover what seems to be a surgery, although everything is crusted in dirt and blood.
-        "Alright, the client has requested some very specific, very expensive upgrades before you take on this job. Take a seat and I'll get them installed lickety-split"`,
+        text: (value) => `He leads you to the back through a door with "KEEP OUT" scratched into it. Beyond the door you discover what seems to be a surgery, although everything is crusted in dirt and blood.
+        "Alright ${value}, the name's Jimbo. Our client has requested some very specific, very expensive upgrades before you take on this job. Take a seat and I'll get them installed lickety-split"`,
         img: 'assets/images/surgery.webp',
         options: [{
                 text: 'Lie down',
+                setState: {
+                    brief: true
+                },
                 nextText: 6
             },
             {
                 text: 'Refuse',
-                nextText: 9
+                nextText: 10
             },
             {
                 text: 'Run away',
-                nextText: 10
+                nextText: 11
             },
             {
                 text: '"Sssssure, shounds great!" (drunk)',
@@ -104,10 +107,10 @@ const textNodes = [{
     },
     {
         id: 6,
-        text: () => '"Fair enough" He says',
-        img: 'assets/images/bar.webp',
+        text: () => 'You feel a pressure on the back of your neck as Jimbo plugs something into your neuralink jack. All of a sudden it feels like every one of your nerves is on fire but somehow you are unable to move or scream. After what feels like an age, the pain subsides and you begin to see text floating in front of your eyes. There is an address and a photo of a well-dressed man with the word TARGET across his face. "Well, that should be everything you need. All the information has been directly downloaded to your brain." He brings you outside where an autocar is waiting and hands you a gun. "Good luck"',
+        img: 'assets/images/surgery.webp',
         options: [{
-            text: 'Continue',
+            text: 'Get into the autocar',
             nextText: 9
         }]
     },
@@ -132,6 +135,46 @@ const textNodes = [{
                 nextText: 7
             }
         ]
+    },
+    {
+        id: 9,
+        text: () => 'The autocar takes you to a run-down motel on the outskirts of the city. When you arrive it appears to be deserted. What do you do?',
+        img: 'assets/images/motel.webp',
+        options: [{
+            text: 'Start shooting randomly at the motel rooms (drunk)',
+            requiredState: (currentState) => currentState.drunk,
+            nextText: 11
+        },
+        {
+            text: 'Use the knowledge you gained from the surgery to approach the correct room',
+            requiredState: (currentState) => currentState.brief,
+            nextText: 12
+        },
+        {
+            text: 'Wait and see what happens',
+            nextText: 13
+        },
+        {
+            text: 'Start randomly knocking on doors',
+            nextText: 14
+        }
+    ]
+    },
+    {
+        id: 10,
+        text: () => 'He says you\'\re crazy for turning it down but he won\'\t force you. He hands you a gun and says there\'\s a car waiting outside for you. They want you to off some corpo type but that\'\s all he knows',
+        options: [{
+            text: 'Get in the autocar',
+            nextText: 9
+        }]
+    },
+    {
+        id: 11,
+        text: () => 'You start firing wildly at the motel until some of the doors burst open, revealing state of the art security bots. They waste no time in shredding you to pieces in a hail of lead.',
+        options: [{
+            text: 'Game over',
+            nextText: -1
+        }]
     }
 ]
 
