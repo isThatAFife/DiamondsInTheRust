@@ -61,7 +61,7 @@ const textNodes = [{
             },
             {
                 text: 'Run away',
-                nextText: 11
+                nextText: 5
             },
         ]
     },
