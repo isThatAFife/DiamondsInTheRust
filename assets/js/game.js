@@ -15,6 +15,7 @@ document.body.style.backgroundSize = "cover";
 
 /**
  * The `showTextNode` function is responsible for displaying the text content, background image, and choices based on the provided `textNode` object.
+ * Parts of this function inspired by youtube tutorials with additions/changes by me.
  * 
  * @function
  * @name showTextNode
