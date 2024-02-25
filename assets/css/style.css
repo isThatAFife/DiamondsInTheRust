@@ -32,7 +32,6 @@ main {
 
 #bgImage {
     min-height: 100vh;
-    min-width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
