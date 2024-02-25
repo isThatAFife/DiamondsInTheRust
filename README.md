@@ -236,7 +236,17 @@ I used Lighthouse within the Chrome Developer Tools to allow me to test the perf
 
 To fully test my website I performed the following testing using a number of browsers (Chrome, Safari, Mozilla Firefox, Duckduckgo) and devices (Mac Studio M1 Ultra, Macbook Pro 16", OnePlus 10 Android phone, iPhone 13 pro).
 
-I also viewed both pages in Chrome developer tools to ensure they were responsive on all screen sizes.
+I attempted to begin the game without entering a name but was not able to, as intended.
+
+Once I entered a name and clicked the start button the game began as expected.
+
+I tested each and every choice button within every text node to make sure they were all working.
+
+I made sure each choice lead to the correct next text node.
+
+When the user encounters a game over screen, I made sure the only choice button available lead back to the first text node.
+
+Each page/text node was tested at various different window sizes to make sure everything scaled correctly depending on the viewport size.
 
 ---
 
