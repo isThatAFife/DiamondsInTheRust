@@ -221,6 +221,7 @@ Testing was ongoing throughout the entire build of the website. I used Chrome de
 ### Known Bugs
 
 1. Sometimes when loading a new scene, the default image will be displayed first before loading in the correct scene image.
+2. The opening screen displays a horizontal scroll bar on certain window sizes.
 
 ### Lighthouse
 
