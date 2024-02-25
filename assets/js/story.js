@@ -57,6 +57,9 @@ const textNodes = [{
             },
             {
                 text: 'Refuse',
+                setState: {
+                    refuse: true
+                },
                 nextText: 10
             },
             {
@@ -235,22 +238,26 @@ const textNodes = [{
         options: [{
                 text: 'Pull the trigger',
                 class: 'rubik',
+                requiredState: (currentState) => !currentState.refuse,
                 nextText: 19
             },
             {
                 text: 'Pull the trigger',
                 class: 'rubik',
+                requiredState: (currentState) => !currentState.refuse,
                 nextText: 19
             },
             {
                 text: 'Pull the trigger',
                 class: 'rubik',
-                nextText: 19
+                requiredState: (currentState) => currentState.refuse,
+                nextText: 20
             },
             {
                 text: 'Pull the trigger',
                 class: 'rubik',
-                nextText: 19
+                requiredState: (currentState) => currentState.refuse,
+                nextText: 20
             }
         ]
     },
@@ -286,6 +293,15 @@ const textNodes = [{
         img: 'assets/images/motelroom.webp',
         options: [{
             text: 'The End',
+            nextText: -1
+        }]
+    },
+    {
+        id: 20,
+        text: (value) => `In this text node, you, ${value} fight back against your oppressors and ride off into the sunset.`,
+        img: 'assets/images/sunset.webp',
+        options: [{
+            text: 'The End (Good End)',
             nextText: -1
         }]
     }
