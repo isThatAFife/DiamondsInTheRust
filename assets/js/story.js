@@ -298,10 +298,10 @@ const textNodes = [{
     },
     {
         id: 20,
-        text: (value) => `In this text node, you, ${value} fight back against your oppressors and ride off into the sunset.`,
+        text: () => `As your finger tightens on the trigger the man shouts "Do it now!" You spin around to see another man in a suit standing behind you. He's frantically mashing what looks like a remote control and looking at you in shock and fear. "It's not working!" he screams just before you shoot him. Your original target attempts to tackle you but he's too slow and you're able to put him down with another bullet. This whole thing was a set up by some corporation or other. It's probably a good thing you didn't get that "upgrade" you were offered. You get back into the autocar, hack the controls and drive off into the sunset. Maybe someday you'll be able to make a quick buck without getting screwed over but not today...`,
         img: 'assets/images/sunset.webp',
         options: [{
-            text: 'The End (Good End)',
+            text: 'The End',
             nextText: -1
         }]
     }
