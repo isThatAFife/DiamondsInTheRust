@@ -35,7 +35,10 @@ function showTextNode(textNode) {
     }
 
     /**
-     * The `textNode.options.forEach(option => {` is iterating over each option object within the `options` array of the current `textNode`. For each option, it is creating a button element in the HTML with the text of the option, adding a 'btn' class to the button, and attaching a click event listener that calls the `selectOption(option)` function when the button is clicked. This allows the user to interact with the game by selecting different choices presented to them based on the current text node.
+     * The `textNode.options.forEach(option => {` is iterating over each option object within the `options` array of the current `textNode`. 
+     * For each option, it is creating a button element in the HTML with the text of the option, adding a 'btn' class to the button, 
+     * and attaching a click event listener that calls the `selectOption(option)` function when the button is clicked. 
+     * This allows the user to interact with the game by selecting different choices presented to them based on the current text node.
      * 
      */
     textNode.options.forEach(option => {
@@ -52,7 +55,7 @@ function showTextNode(textNode) {
     });
 
     /**
-     * The `selectOption(option)` function is responsible for handling the user's choice selection in the game. Here is a breakdown of what the function does:
+     * The `selectOption(option)` function is responsible for handling the user's choice selection in the game.
      * 
      * @function
      * @name selectOption
@@ -76,7 +79,10 @@ function showTextNode(textNode) {
 }
 
 /**
- * The `getUserName()` function is responsible for retrieving the user's name from the input element and starting the game. It adds an event listener to the start button so that when the button is clicked, it checks if a name has been entered in the input field. If a name is entered, it sets the `userName` variable to the entered value, hides the welcome screen, displays the game space, and then calls the `showTextNode()` function with the first text node to start the game. If no name is entered, it displays an alert asking the user to enter a name.
+ * The `getUserName()` function is responsible for retrieving the user's name from the input element and starting the game. 
+ * It adds an event listener to the start button so that when the button is clicked, it checks if a name has been entered in the input field. 
+ * If a name is entered, it sets the `userName` variable to the entered value, hides the welcome screen, displays the game space, 
+ * and then calls the `showTextNode()` function with the first text node to start the game. If no name is entered, it displays an alert asking the user to enter a name.
  * 
  * @function
  * @name getUserName
