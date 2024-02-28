@@ -144,6 +144,8 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
   Github - To save and store the files for the website.
 
+  GitPod - To develop project and organise version control.
+
   Google Fonts - To import the fonts used on the website.
 
   Font Awesome - For the iconography on the website.
@@ -203,6 +205,8 @@ Testing was ongoing throughout the entire build of the website. I used Chrome de
 
 ### JSHint
 
+JSHint was used to look for errors in game.js and story.js. No errors found.
+
 #### Game.js
 
 ![game.js](docs/validators/gamejs.png)
@@ -213,9 +217,13 @@ Testing was ongoing throughout the entire build of the website. I used Chrome de
 
 ### W3C Validator
 
+The W3C validator found no errors in index.html.
+
 ![Main page HTML](docs/validators/w3chtml.png)
 
 ### Jigsaw CSS Validator
+
+No errors found in style.css.
 
 ![style.css](docs/validators/jigsawcss.png)
 
