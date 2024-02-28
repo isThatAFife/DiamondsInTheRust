@@ -266,18 +266,19 @@ const textNodes = [{
         text: () => `"No thank you!" the man shouts from behind the door. Looks like that isn't going to work...`,
         img: 'assets/images/motel.webp',
         options: [{
-            text: 'Kick the door down and rush in gun-first',
-            nextText: 16
-        },
-        {
-            text: '"Assassin! I\'\m here to kill you!"',
-            nextText: 18
-        },
-        {
-            text: 'It\'\sh yer besht friend, Bill! Let me in old buddy! (hic)',
-            requiredState: (currentState) => currentState.drunk,
-            nextText: 17
-        }]
+                text: 'Kick the door down and rush in gun-first',
+                nextText: 16
+            },
+            {
+                text: '"Assassin! I\'\m here to kill you!"',
+                nextText: 18
+            },
+            {
+                text: 'It\'\sh yer besht friend, Bill! Let me in old buddy! (hic)',
+                requiredState: (currentState) => currentState.drunk,
+                nextText: 17
+            }
+        ]
     },
     {
         id: 18,
