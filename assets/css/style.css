@@ -9,7 +9,7 @@ body {
     letter-spacing: 0.2rem;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
