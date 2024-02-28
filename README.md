@@ -109,9 +109,13 @@ Wireframes were created for mobile and desktop.
 
 The website will be a single page and all navigation will be done through 2-4 "choice" buttons presented to the player. Once a choice is made (button clicked), the scene will change, including the background image, text box and choice buttons.
 
+![Choicebuttons](docs/screenshots/choicebuttons.png)
+
 The player will be able to make choices early on that will affect what other choices will be available to them later on. For example, they can choose to take or leave an item in scene 2 which will determine whether or not they will have another choice to make later on.
 
 Once players reach the end by either completing the story or reaching a GAME OVER screen, they will be presented with a button to restart from the beginning.
+
+![GameOver](docs/screenshots/gameover.png)
 
 Choices can be made by clicking the buttons.
 
