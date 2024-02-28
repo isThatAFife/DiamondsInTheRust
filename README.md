@@ -18,7 +18,7 @@ Find the live site [here]
   * [Wireframes](#wireframes)
 
 * [Features](#features)
-  * [General Features on Each Page](#general-features-on-each-page)
+  * [General Features on Each Page](#features)
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
@@ -203,7 +203,13 @@ Testing was ongoing throughout the entire build of the website. I used Chrome de
 
 ### JSHint
 
-![game.js](docs/validators/jshint.png)
+#### Game.js
+
+![game.js](docs/validators/gamejs.png)
+
+#### Story.js
+
+![story.js](docs/validators/storyjs.png)
 
 ### W3C Validator
 
