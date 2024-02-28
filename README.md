@@ -231,11 +231,11 @@ No errors found in style.css.
 
 1. Initially the game would return "undefined" or nothing at all instead of the user's input on the welcome screen. This was because the game was being started before the userName variable was updated. With the help of tutor support I was able to rearrange the code and order of execution, creating a new getUserName() function and placing it inside the initGame() function, ensuring it would return the updated variable when the game started.
 2. If there was no img property in a text node, or if there was no text node ID, the background was not displayed. This was fixed by adding an if/else statement to the showTextNode function that would display a default image if there was no img property present.
+3. The main page would display a horizontal scrollbar on certain window sizes. Made overflow hidden in style.css to fix this issue.
 
 ### Known Bugs
 
 1. Sometimes when loading a new scene, the default image will be displayed first before loading in the correct scene image.
-2. The opening screen displays a horizontal scroll bar on certain window sizes.
 
 ### Lighthouse
 
